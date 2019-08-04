@@ -20,6 +20,6 @@ implementation 'com.github.s6joui:quicktalk:1.0.1-alpha'
 ```
 ## Usage
 ```kotlin
-val qt = QuickTalk(this,this)
+val qt = QuickTalk(this)
 qt.play("Hello World!")
 ```

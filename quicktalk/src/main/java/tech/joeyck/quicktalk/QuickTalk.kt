@@ -14,7 +14,7 @@ import tech.joeyck.quicktalk.QuickTalkService.Companion.QT_SERVICE_MSG_START_PHR
 import tech.joeyck.quicktalk.QuickTalkService.Companion.QT_SERVICE_MSG_START_TALKING
 import tech.joeyck.quicktalk.QuickTalkService.Companion.QT_SERVICE_MSG_STOP_TALKING
 
-class QuickTalk(private val context: Context, private val listener: QuickTalkListener?): QuickTalkInterface {
+class QuickTalk(private val context: Context, private val listener: QuickTalkListener? = null): QuickTalkInterface {
 
     companion object{
         const val TAG = "QuickTalk"

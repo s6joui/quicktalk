@@ -14,13 +14,13 @@ import tech.joeyck.quicktalk.QuickTalkService.Companion.QT_SERVICE_MSG_START_PHR
 import tech.joeyck.quicktalk.QuickTalkService.Companion.QT_SERVICE_MSG_START_TALKING
 import tech.joeyck.quicktalk.QuickTalkService.Companion.QT_SERVICE_MSG_STOP_TALKING
 
-class QuickTalk(val context: Context, val listener: QuickTalkListener?): QuickTalkInterface {
+class QuickTalk(private val context: Context, private val listener: QuickTalkListener?): QuickTalkInterface {
 
     companion object{
         const val TAG = "QuickTalk"
     }
 
-    val receiver: BroadcastReceiver  = object : BroadcastReceiver() {
+    private val receiver: BroadcastReceiver  = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
             if (intent == null) { return }
             Log.i(TAG,intent.action)
